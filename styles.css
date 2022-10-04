@@ -1,0 +1,243 @@
+* {
+    /* reset default spacing */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2 {
+    margin-bottom: 10px;
+}
+
+ul {
+    /* remove list bullets  */
+    list-style-type: none;
+}
+
+.container {
+    /* debug */
+    border: 1px solid red;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* navbar */
+
+.navbar {
+    /* debug */
+    border: 2px solid green;
+    background-color: #1F2937;
+    color: #F9FAF8;
+    height: 100px;
+}
+
+.navbar .logo {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: #F9FAF8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: palevioletred;
+}
+
+.navbar ul {
+    /* apply flexbox */
+    display: flex;
+    gap: 30px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/* top section (header) */
+
+.header {
+    background-color: #1F2937;
+    color: #F9FAF8;
+    min-height: 500px;
+    border: 2px solid blue;
+    display: flex;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.header p,
+.header button {
+    color: #E5E7EB;
+}
+
+.header button {
+    padding: 6px 35px;
+    background-color: #3882F6;
+    border: 2px solid #3882F6;
+    border-radius: 15px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.header .button:hover {
+    background-color: #002ead;
+}
+
+.header .container {
+    /* debug */
+    border: 2px solid yellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    height: 100%;
+}
+
+.header img {
+    /* debug */
+    border: 2px solid plum;
+    max-width: max-content;
+}
+
+.header .content {
+    /* debug */
+    border: 2px solid plum;
+}
+
+/* mid section (boxes with photos) */
+
+.boxes .container {
+    display: flex;
+}
+
+.boxes h1 {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.boxes img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 10px;
+    border: 5px solid #3882F6;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+}
+
+.boxes .box {
+    border: 2px solid saddlebrown;
+    flex: 1;
+    text-align: center;
+    color: #1F2937;
+    margin: 20px 15px;
+    padding: 15px 15px;
+}
+
+/* lower mid section (quote) */
+.article {
+    border: 2px solid salmon;
+    background-color: #E5E7EB;
+    color: #1F2937;
+    font-size: 36px;
+    font-style: italic;
+    min-height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article h4 {
+    font-size: 30px;
+    text-align: end;
+    padding-right: 100px;
+    margin-top: 10px;
+}
+
+/* last section (page ad) */
+
+.page-ad {
+    border: 2px solid yellow;
+    min-height: 400px;
+
+    display: flex;
+    align-items: center;
+}
+
+.page-ad .container {
+    /* debug */
+    border: 2px solid plum;
+    background-color: #3882F6;
+    border-radius: 10px;
+    color: #F9FAF8;
+    line-height: 1.2;
+    height: 150px;
+    width: 1200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 150px;
+}
+
+.page-ad .container button {
+    padding: 6px 35px;
+    background-color: #3882F6;
+    border: 2px solid #3882F6;
+    border: 3px solid white;
+    border-radius: 15px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.page-ad .button:hover {
+    background-color: #002ead;
+}
+
+footer {
+    background-color: #1F2937;
+    min-height: 100px;
+    color: #E5E7EB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 768px) {
+
+    .header .container,
+    .article .container {
+        flex-direction: column;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .boxes .container {
+        display: block;
+        text-align: center;
+    }
+}
